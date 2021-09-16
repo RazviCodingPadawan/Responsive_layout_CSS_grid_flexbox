@@ -177,18 +177,29 @@ aside{
     column-gap: 2%;
 }
 header{
-    flex-direction: row;
+/*     flex-direction: row; */
     justify-content: flex-start;
+    align-items: center;
 }
 main{
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
+    align-items: stretch;
+    align-content: normal;
+    gap: 10px 20px;
 }
 section{
     border: 1px solid #333;
 }
+/* [class*="content-"]{
+    min-width: 200px;
+} */
 aside{
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
+    height: 200px;
+    row-gap: 5px;
+}
+.button4{
+    margin-left: auto;
 }
