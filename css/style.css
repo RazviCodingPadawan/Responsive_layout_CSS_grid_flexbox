@@ -1,0 +1,182 @@
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+
+#container{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2%;
+    row-gap: 20px;
+    grid-template-areas: 
+    "header header header header"
+    "boxes boxes boxes boxes"
+    "content content content sidebar"
+    "footer footer footer footer";
+}
+
+.boxes{
+    grid-area: boxes;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2%;
+    row-gap: 20px;
+    grid-template-areas: 
+    "box1 box2 box2 box2 box2 box3";
+}
+
+header{
+    grid-area: header;
+}
+main{
+    grid-area: content;
+}
+aside{
+    grid-area: sidebar;
+}
+footer{
+    grid-area: footer;
+}
+.box-1{
+    grid-area: box1;
+}
+.box-2{
+    grid-area: box2;
+}
+.box-3{
+    grid-area: box3;
+}
+
+header,
+main,
+aside,
+footer,
+[class*="box-"],
+[class*="section-"]{
+    border: 1px solid #333;
+    min-height: 100px;
+}
+
+footer{
+    padding: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2%;
+    row-gap: 20px;
+    display: grid;
+}
+
+/* Mindre desktopskärmar */
+@media screen and (max-width: 1200px){
+    #container{
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2%;
+        row-gap: 20px;
+        grid-template-areas: 
+        "header header header"
+        "boxes boxes boxes"
+        "content content sidebar"
+        "footer footer footer";
+    }
+    .boxes{
+        grid-area: boxes;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2%;
+        row-gap: 20px;
+        grid-template-areas: 
+        "box1 box2 box2 box3";
+    }
+
+}
+
+/* Tablets såsom Ipad */
+@media screen and (max-width: 960px){
+    #container{
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2%;
+        row-gap: 20px;
+        grid-template-areas: 
+        "header header"
+        "boxes boxes"
+        "content sidebar"
+        "footer footer";
+    }
+    .boxes{
+        grid-area: boxes;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2%;
+        row-gap: 20px;
+        grid-template-areas: 
+        "box1 box2 box3";
+    }
+    footer{
+        padding: 5px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2%;
+        row-gap: 20px;
+        display: grid;
+    }
+}
+
+/* Mobiltelefoner */
+@media screen and (max-width: 768px){
+    #container{
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 2%;
+        row-gap: 20px;
+        grid-template-areas: 
+        "header"
+        "boxes"
+        "content"
+        "sidebar"
+        "footer";
+    }
+    .boxes{
+        grid-area: boxes;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 2%;
+        row-gap: 20px;
+        grid-template-areas: 
+        "box1"
+        "box2"
+        "box3";
+    }
+    footer{
+        padding: 5px;
+        grid-template-columns: 1fr;
+        column-gap: 2%;
+        row-gap: 20px;
+        display: grid;
+    }
+}
+
+
+header,
+main,
+aside{
+    background-color: beige;
+    display: flex;
+}
+section{
+    border: 1px solid #333;
+}
+aside{
+    flex-direction: column;
+}
