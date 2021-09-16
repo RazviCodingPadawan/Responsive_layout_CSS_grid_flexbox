@@ -173,10 +173,22 @@ main,
 aside{
     background-color: beige;
     display: flex;
+    padding: 5px;
+    column-gap: 2%;
+}
+header{
+    flex-direction: row;
+    justify-content: flex-start;
+}
+main{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 section{
     border: 1px solid #333;
 }
 aside{
     flex-direction: column;
+    justify-content: space-around;
 }
