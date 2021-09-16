@@ -176,6 +176,12 @@ aside{
     padding: 5px;
     gap: 25px 2%;
 }
+.boxes,
+main,
+aside,
+footer{
+    height: 200px;
+}
 header{
     align-items: center;
 }
@@ -191,13 +197,19 @@ section{
 aside{
     flex-direction: column;
     justify-content: flex-start;
-    height: 200px;
-    row-gap: 5px;
+    row-gap: 5%;
 }
 .button1{
     margin-left: 15px;
 }
 .button4{
     margin-left: auto;
+    margin-right: 15px;
+}
+.asidebutton1{
+    margin-top: 15px;
+}
+[class*="asidebutton"]{
+    margin-left: 15px;
     margin-right: 15px;
 }
