@@ -174,32 +174,30 @@ aside{
     background-color: beige;
     display: flex;
     padding: 5px;
-    column-gap: 2%;
+    gap: 25px 2%;
 }
 header{
-/*     flex-direction: row; */
-    justify-content: flex-start;
     align-items: center;
 }
 main{
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: stretch;
     align-content: normal;
-    gap: 10px 20px;
 }
 section{
     border: 1px solid #333;
 }
-/* [class*="content-"]{
-    min-width: 200px;
-} */
 aside{
     flex-direction: column;
     justify-content: flex-start;
     height: 200px;
     row-gap: 5px;
 }
+.button1{
+    margin-left: 15px;
+}
 .button4{
     margin-left: auto;
+    margin-right: 15px;
 }
