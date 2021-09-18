@@ -174,30 +174,17 @@ aside{
     background-color: beige;
     display: flex;
     padding: 5px;
-    gap: 25px 2%;
+    column-gap: 2%;
+    row-gap: 20px;
 }
 .boxes,
 main,
 aside,
 footer{
-    height: 200px;
+    min-height: 200px;
 }
 header{
     align-items: center;
-}
-main{
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: normal;
-}
-section{
-    border: 1px solid #333;
-}
-aside{
-    flex-direction: column;
-    justify-content: flex-start;
-    row-gap: 5%;
 }
 .button1{
     margin-left: 15px;
@@ -206,10 +193,25 @@ aside{
     margin-left: auto;
     margin-right: 15px;
 }
+main{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+[class*="content-"]{
+    border: 1px solid #333;
+    flex: 30%; /*aici am ramas blocat*/
+}
+aside{
+    flex-direction: column;
+    row-gap: 5px;
+}
 .asidebutton1{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 [class*="asidebutton"]{
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
 }
