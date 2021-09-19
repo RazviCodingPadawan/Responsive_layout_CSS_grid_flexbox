@@ -201,7 +201,9 @@ main{
 }
 [class*="content-"]{
     border: 1px solid #333;
-    flex: 30%; /*aici am ramas blocat*/
+    flex-grow: 1;
+    height: 95px;
+    width: 250px;
 }
 aside{
     flex-direction: column;
